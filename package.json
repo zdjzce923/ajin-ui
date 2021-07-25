@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/zdjzce923/ajin-ui/issues"
   },
-  "homepage": "https://github.com/zdjzce923/ajin-ui#readme"
+  "homepage": "https://github.com/zdjzce923/ajin-ui#readme",
+  "dependencies": {
+    "vue": "^2.5.16"
+  }
 }
