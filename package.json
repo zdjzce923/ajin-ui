@@ -21,6 +21,16 @@
   },
   "homepage": "https://github.com/zdjzce923/ajin-ui#readme",
   "dependencies": {
-    "vue": "^2.5.16"
+    "vue": "^2.6.14",
+    "vue-hot-reload-api": "^2.3.4"
+  },
+  "devDependencies": {
+    "@vue/component-compiler-utils": "^3.2.2",
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.36.0",
+    "vue-template-compiler": "^2.6.14"
+  },
+  "alias": {
+    "vue": "./node_modules/vue/dist/vue.common.js"
   }
 }
