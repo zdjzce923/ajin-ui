@@ -1,0 +1,23 @@
+{
+  "name": "ajin",
+  "version": "0.0.1",
+  "description": "这是一个UI组件",
+  "main": "index.js",
+  "scripts": {
+    "test": "(https://github.com/zdjzce923/ajin-ui.git)"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zdjzce923/ajin-ui.git"
+  },
+  "keywords": [
+    "vue",
+    "ui"
+  ],
+  "author": "zengdejin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zdjzce923/ajin-ui/issues"
+  },
+  "homepage": "https://github.com/zdjzce923/ajin-ui#readme"
+}
