@@ -4,7 +4,7 @@
     :class="{ [`icon-${iconPosition}`]: true }"
     @click="$emit('click')"
   >
-    <g-icon class="icon loading" name="jiazai" v-if="loading"></g-icon>
+    <g-icon class="icon loading" name="loading" v-if="loading"></g-icon>
     <g-icon class="icon" :name="icon" v-if="icon && !loading"></g-icon>
     <div class="content">
       <slot />
