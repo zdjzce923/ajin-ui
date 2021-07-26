@@ -1,6 +1,11 @@
 <template>
-  <button class="g-button" :class="{ [`icon-${iconPosition}`]: true }">
-    <g-icon class="icon" :name="icon" v-if="icon"></g-icon>
+  <button
+    class="g-button"
+    :class="{ [`icon-${iconPosition}`]: true }"
+    @click="$emit('click')"
+  >
+    <g-icon class="icon loading" name="jiazai" v-if="loading"></g-icon>
+    <g-icon class="icon" :name="icon" v-if="icon && !loading"></g-icon>
     <div class="content">
       <slot />
     </div>
@@ -11,6 +16,9 @@
 export default {
   props: {
     icon: {},
+    loading: {
+      type: Boolean,
+    },
     iconPosition: {
       type: String,
       default: "left",
@@ -59,6 +67,17 @@ export default {
       margin-right: 0;
       margin-left: 0.1em;
     }
+  }
+  @keyframes load {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  .loading {
+    animation: load 1.5s infinite linear;
   }
 }
 </style>
