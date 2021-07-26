@@ -1,13 +1,33 @@
 <template>
-  <button class="g-button">按钮</button>
+  <button class="g-button" :class="{ [`icon-${iconPosition}`]: true }">
+    <g-icon class="icon" :name="icon" v-if="icon"></g-icon>
+    <div class="content">
+      <slot />
+    </div>
+  </button>
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    icon: {},
+    iconPosition: {
+      type: String,
+      default: "left",
+      validator(value) {
+        return value === "left" || value === "right";
+      },
+    },
+  },
+};
 </script>
 
 <style lang='scss'>
 .g-button {
+  vertical-align: middle;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   font-size: var(--font-size);
   height: var(--button-height);
   padding: 0 1em;
@@ -22,6 +42,23 @@ export default {};
   }
   &:focus {
     outline: none;
+  }
+  > .content {
+    order: 2;
+  }
+  > .icon {
+    order: 1;
+    margin-right: 0.1em;
+  }
+  &.icon-right {
+    > .content {
+      order: 1;
+    }
+    > .icon {
+      order: 2;
+      margin-right: 0;
+      margin-left: 0.1em;
+    }
   }
 }
 </style>
