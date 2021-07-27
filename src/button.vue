@@ -13,7 +13,11 @@
 </template>
 
 <script>
+import GIcon from "./icon.vue";
 export default {
+  components: {
+    GIcon: GIcon,
+  },
   props: {
     icon: {},
     loading: {
