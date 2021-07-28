@@ -8,7 +8,7 @@ Vue.component('g-button-group', ButtonGroup)
 Vue.component('g-input', GInput)
 new Vue({
   el: '#app',
-  data: { loading1: true, loading2: false, loading3: false },
+  data: { loading1: true, loading2: false, loading3: false, message: '1' },
 })
 import chai from 'chai'
 const expect = chai.expect

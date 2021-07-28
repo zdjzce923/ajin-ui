@@ -42,6 +42,11 @@
         <g-input value="567" :readonly="true"></g-input>
         <g-input value="567" error="不合法输入"></g-input>
       </div>
+      <div class="box">
+        <g-input v-model="message"></g-input>
+        <p>{{message}}</p>
+        <button @click="message+=1">++</button>
+      </div>
       <g-button :loading="loading1" @click="loading1 = !loading1">按钮</g-button>
       <g-button :loading="loading2" icon="setting" @click="loading2 = !loading2">按钮</g-button>
       <g-button
