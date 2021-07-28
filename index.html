@@ -28,11 +28,20 @@
         margin-top: 20px;
         font-size: var(--font-size);
       }
+      .box {
+        margin: 10px 0px;
+      }
     </style>
     <style></style>
   </head>
   <body>
     <div id="app">
+      <div class="box">
+        <g-input value="123"></g-input>
+        <g-input value="234" :disabled="true"></g-input>
+        <g-input value="567" :readonly="true"></g-input>
+        <g-input value="567" error="不合法输入"></g-input>
+      </div>
       <g-button :loading="loading1" @click="loading1 = !loading1">按钮</g-button>
       <g-button :loading="loading2" icon="setting" @click="loading2 = !loading2">按钮</g-button>
       <g-button
