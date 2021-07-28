@@ -32,17 +32,17 @@ html {
 
 IE 15 及以上浏览器都支持此样式。
 
-2. 安装 ajin-vue-ui
+2. 安装 ajin-ui-demo
 
 ```
-npm i --save ajin-vue-ui
+npm i --save ajin-ui-demo
 ```
 
-3. 引入 ajin-vue-ui
+3. 引入 ajin-ui-demo
 
 ```
-import {Button, ButtonGroup, Icon} from 'ajin-vue-ui'
-import 'ajin-vue-ui/dist/index.css'
+import {Button, ButtonGroup, Icon} from 'ajin-ui-demo'
+import 'ajin-ui-demo/dist/index.css'
 
 export default {
   name: 'app',

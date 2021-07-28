@@ -36,6 +36,7 @@
   </head>
   <body>
     <div id="app">
+      <!-- input -->
       <div class="box">
         <g-input value="123"></g-input>
         <g-input value="234" :disabled="true"></g-input>
@@ -47,6 +48,7 @@
         <p>{{message}}</p>
         <button @click="message+=1">++</button>
       </div>
+      <!-- 按钮 -->
       <g-button :loading="loading1" @click="loading1 = !loading1">按钮</g-button>
       <g-button :loading="loading2" icon="setting" @click="loading2 = !loading2">按钮</g-button>
       <g-button
@@ -61,6 +63,14 @@
         <g-button icon="left">按钮</g-button>
         <g-button icon="right" icon-position="right">按钮</g-button>
       </g-button-group>
+      <!-- grid -->
+      <div style="border:1px solid black">
+        <g-row class="row" gutter="20">
+          <g-col class="child" span="8">1</g-col>
+          <g-col class="child" span="8">2</g-col>
+          <g-col class="child" span="8">2</g-col>
+        </g-row>
+      </div>
     </div>
     <script src="/src/app.js"></script>
   </body>
