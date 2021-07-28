@@ -1,5 +1,5 @@
 {
-  "name": "ajin-vue-ui",
+  "name": "ajin-ui-demo",
   "version": "0.0.1",
   "description": "这是一个UI组件",
   "main": "dist/index.js",
