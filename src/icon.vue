@@ -1,5 +1,5 @@
 <template>
-  <svg class="g-icon" aria-hidden="true">
+  <svg class="j-icon" aria-hidden="true">
     <use :xlink:href="`#icon-${name}`"></use>
   </svg>
 </template>
@@ -12,7 +12,7 @@ export default {
 </script>
 
 <style lang='scss'>
-.g-icon {
+.j-icon {
   width: 1em;
   height: 1em;
   vertical-align: -0.15em;

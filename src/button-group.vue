@@ -1,16 +1,17 @@
 <template>
-  <div class="g-button-group">
+  <div class="j-button-group">
     <slot />
   </div>
 </template>
 
 <script>
 export default {
+  name: "AjinGroup",
   mounted() {
     for (let node of this.$el.children) {
       let name = node.nodeName.toLowerCase();
       if (name !== "button") {
-        console.error(`g-button-group 的子元素应是 g-button 而你写的是${name}`);
+        console.error(`j-button-group 的子元素应是 g-button 而你写的是${name}`);
       }
     }
   },
@@ -18,10 +19,10 @@ export default {
 </script>
 
 <style lang='scss'>
-.g-button-group {
+.j-button-group {
   display: inline-flex;
   vertical-align: middle;
-  > .g-button {
+  > .j-button {
     border-radius: 0;
     &:not(:first-child) {
       margin-left: -1px;

@@ -21,7 +21,7 @@
 import Icon from "./icon.vue";
 export default {
   components: { Icon },
-  name: "ginput",
+  name: "AjinInput",
   props: {
     value: {
       type: String,

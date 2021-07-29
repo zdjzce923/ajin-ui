@@ -1,11 +1,11 @@
 <template>
   <button
-    class="g-button"
+    class="j-button"
     :class="{ [`icon-${iconPosition}`]: true }"
     @click="$emit('click')"
   >
-    <g-icon class="icon loading" name="loading" v-if="loading"></g-icon>
-    <g-icon class="icon" :name="icon" v-if="icon && !loading"></g-icon>
+    <j-icon class="icon loading" name="loading" v-if="loading"></j-icon>
+    <j-icon class="icon" :name="icon" v-if="icon && !loading"></j-icon>
     <div class="content">
       <slot />
     </div>
@@ -13,10 +13,10 @@
 </template>
 
 <script>
-import GIcon from "./icon.vue";
+import JIcon from "./icon.vue";
 export default {
   components: {
-    GIcon: GIcon,
+    JIcon: JIcon,
   },
   props: {
     icon: {},
@@ -35,7 +35,7 @@ export default {
 </script>
 
 <style lang='scss'>
-.g-button {
+.j-button {
   vertical-align: middle;
   display: inline-flex;
   justify-content: center;
