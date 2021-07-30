@@ -29,53 +29,9 @@
         font-size: var(--font-size);
       }
     </style>
-    <style>
-      .layout1 {
-        height: 100vh;
-        border: 1px solid green;
-      }
-      .children {
-        border: 1px solid red;
-        height: 100px;
-        width: 100%;
-      }
-      .children1 {
-        background: grey;
-        width: 40%;
-        height: 100vh;
-      }
-      .layout2 {
-        width: 100vw;
-      }
-    </style>
   </head>
   <body>
-    <div id="app">
-      <!-- 默认布局 -->
-      <!-- <j-layout class="layout">
-        <j-header class="children">header</j-header>
-        <j-content class="children">content</j-content>
-        <j-footer class="children">footer</j-footer>
-      </j-layout> -->
-
-      <!-- <j-layout class="layout">
-        <j-header class="children">header</j-header>
-        <j-layout>
-          <j-content class="children">content</j-content>
-          <j-sider class="children">sider</j-sider>
-        </j-layout>
-        <j-footer class="children">footer</j-footer>
-      </j-layout> -->
-
-      <j-layout class="layout1">
-        <j-sider class="children1">sider</j-sider>
-        <j-layout class="layout2">
-          <j-header class="children">header</j-header>
-          <j-content class="children">content</j-content>
-          <j-footer class="children">footer</j-footer>
-        </j-layout>
-      </j-layout>
-    </div>
+    <div id="app"></div>
     <script src="/src/app.js"></script>
   </body>
 </html>

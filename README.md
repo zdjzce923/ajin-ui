@@ -2,7 +2,8 @@
 
 ## 介绍
 
-这是我在学习 Vue 过程中做的一个 UI 框架，希望对你有帮助。
+这是一个 Vue 的 UI 框架，是我在学习过程中参考 Element-ui 做的。
+包含 Button Input Grid Layout Tabs Toast Popover Collapse 八个组件。
 
 ## 开始使用
 
@@ -47,8 +48,8 @@ import 'ajin-ui-demo/dist/index.css'
 export default {
   name: 'app',
   components: {
-    'g-button': Button,
-    'g-icon': Icon
+    'j-button': Button,
+    'j-icon': Icon
   }
 }
 ```
