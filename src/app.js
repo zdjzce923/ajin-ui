@@ -44,9 +44,5 @@ new Vue({
       selectedName: 'tabs1',
     }
   },
-  methods: {
-    yyy(data) {
-      console.log(data)
-    },
-  },
+  methods: {},
 })

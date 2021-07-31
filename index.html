@@ -30,6 +30,9 @@
     <div id="app">
       <j-tabs :selected.sync="selectedName">
         <j-tabs-head>
+          <template slot="action">
+            <button>选项</button>
+          </template>
           <j-tabs-item name="tabs1">
             <j-icon name="setting"></j-icon>
             tabs1

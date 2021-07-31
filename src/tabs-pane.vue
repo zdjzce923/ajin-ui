@@ -1,5 +1,5 @@
 <template>
-  <div class="tabs-pane">
+  <div class="tabs-pane" v-if="active" :class="classesActive">
     <slot></slot>
   </div>
 </template>
@@ -8,21 +8,36 @@
 export default {
   name: "AjinTabsPane",
   inject: ["eventBus"],
+  data() {
+    return {
+      active: false,
+    };
+  },
   props: {
     name: {
       type: String,
       required: true,
     },
   },
+  computed: {
+    classesActive() {
+      return {
+        active: this.active,
+      };
+    },
+  },
   mounted() {
     this.eventBus.$on("update:selected", (name) => {
-      if (name === this.name) {
-        console.log(`点击了item 我是 ${this.name}`);
-      }
+      this.active = name === this.name;
     });
   },
 };
 </script>
 
 <style lang="scss" scoped>
+.tabs-pane {
+  &.active {
+    background: red;
+  }
+}
 </style>
