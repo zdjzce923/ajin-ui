@@ -28,9 +28,21 @@
   </head>
   <body>
     <div id="app">
-      <button @click="showToast1">top</button>
-      <button @click="showToast2">middle</button>
-      <button @click="showToast3">bottom</button>
+      <j-tabs :selected.sync="selectedName">
+        <j-tabs-head>
+          <j-tabs-item name="tabs1">
+            <j-icon name="setting"></j-icon>
+            tabs1
+          </j-tabs-item>
+          <j-tabs-item name="tabs2">tabs2</j-tabs-item>
+          <j-tabs-item name="tabs3">tabs3</j-tabs-item>
+        </j-tabs-head>
+        <j-tabs-body>
+          <j-tabs-pane name="tabs1">tabs1内容</j-tabs-pane>
+          <j-tabs-pane name="tabs2">tabs2内容</j-tabs-pane>
+          <j-tabs-pane name="tabs3">tabs3内容</j-tabs-pane>
+        </j-tabs-body>
+      </j-tabs>
     </div>
     <script src="/src/app.js"></script>
   </body>
