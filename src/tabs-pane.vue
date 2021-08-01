@@ -15,7 +15,7 @@ export default {
   },
   props: {
     name: {
-      type: String,
+      type: String || Number,
       required: true,
     },
   },
@@ -26,7 +26,7 @@ export default {
       };
     },
   },
-  mounted() {
+  created() {
     this.eventBus.$on("update:selected", (name) => {
       this.active = name === this.name;
     });

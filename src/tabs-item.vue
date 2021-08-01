@@ -26,14 +26,14 @@ export default {
       default: false,
     },
     name: {
-      type: String,
+      type: String || Number,
       required: true,
     },
   },
   inject: ["eventBus"],
   methods: {
     selectedTab() {
-      this.eventBus.$emit("update:selected", this.name);
+      this.eventBus.$emit("update:selected", this.name, this);
       this.active = true;
     },
   },
@@ -42,10 +42,16 @@ export default {
 
 <style lang="scss" scoped>
 .tabs-item {
+  $blue: blue;
   flex-shrink: 0;
   padding: 0 1em;
+  cursor: pointer;
+  height: 100%;
+  display: flex;
+  align-items: center;
   &.active {
-    background: red;
+    color: $blue;
+    font-weight: bold;
   }
 }
 </style>

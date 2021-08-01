@@ -31,7 +31,18 @@ export default {
     };
   },
   mounted() {
-    this.eventBus.$emit("update:selected", this.selected);
+    this.$children.forEach((vm) => {
+      if (vm.$options.name === "AjinTabsHead") {
+        vm.$children.forEach((childVm) => {
+          if (
+            childVm.$options.name === "AjinTabsItem" &&
+            childVm.name === this.selected
+          ) {
+            this.eventBus.$emit("update:selected", this.selected, childVm);
+          }
+        });
+      }
+    });
   },
   name: "AjinTabs",
 };
