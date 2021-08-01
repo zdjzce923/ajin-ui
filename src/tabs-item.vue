@@ -17,7 +17,7 @@ export default {
       this.eventBus.$on("update:selected", (name) => {
         this.active = name === this.name;
       });
-      return { active: this.active };
+      return { active: this.active, disabled: this.disabled };
     },
   },
   props: {
@@ -33,6 +33,9 @@ export default {
   inject: ["eventBus"],
   methods: {
     selectedTab() {
+      if (this.disabled) {
+        return;
+      }
       this.eventBus.$emit("update:selected", this.name, this);
       this.active = true;
     },
@@ -42,6 +45,7 @@ export default {
 
 <style lang="scss" scoped>
 .tabs-item {
+  $disabled-text-color: grey;
   $blue: blue;
   flex-shrink: 0;
   padding: 0 1em;
@@ -52,6 +56,9 @@ export default {
   &.active {
     color: $blue;
     font-weight: bold;
+  }
+  &.disabled {
+    color: $disabled-text-color;
   }
 }
 </style>

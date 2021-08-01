@@ -41,7 +41,7 @@ new Vue({
   el: '#app',
   data() {
     return {
-      selectedName: 'tabs1',
+      selectedName: 'tabs2',
     }
   },
   methods: {},
