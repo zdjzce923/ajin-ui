@@ -46,7 +46,7 @@ export default {
 <style lang="scss" scoped>
 .tabs-item {
   $disabled-text-color: grey;
-  $blue: blue;
+  $blue: #3faf7c;
   flex-shrink: 0;
   padding: 0 1em;
   cursor: pointer;

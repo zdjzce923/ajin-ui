@@ -24,7 +24,7 @@ export default {
 
 <style lang="scss" scoped>
 $tab-height: 40px;
-$blue: blue;
+$blue: #3faf7c;
 $border-color: #ddd;
 .tabs-head {
   display: flex;
