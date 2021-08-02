@@ -1,5 +1,10 @@
 <template>
-  <div class="tabs-item" @click="selectedTab" :class="classesActive">
+  <div
+    class="tabs-item"
+    @click="selectedTab"
+    :class="classes"
+    :data-name="name"
+  >
     <slot></slot>
   </div>
 </template>
@@ -13,12 +18,19 @@ export default {
     };
   },
   computed: {
-    classesActive() {
+    classes() {
+      return {
+        active: this.active,
+        disabled: this.disabled,
+      };
+    },
+  },
+  created() {
+    if (this.eventBus) {
       this.eventBus.$on("update:selected", (name) => {
         this.active = name === this.name;
       });
-      return { active: this.active, disabled: this.disabled };
-    },
+    }
   },
   props: {
     disabled: {
@@ -36,7 +48,8 @@ export default {
       if (this.disabled) {
         return;
       }
-      this.eventBus.$emit("update:selected", this.name, this);
+      this.eventBus && this.eventBus.$emit("update:selected", this.name, this);
+      this.$emit("click", this);
       this.active = true;
     },
   },
@@ -46,7 +59,7 @@ export default {
 <style lang="scss" scoped>
 .tabs-item {
   $disabled-text-color: grey;
-  $blue: #3faf7c;
+  $green: #3faf7c;
   flex-shrink: 0;
   padding: 0 1em;
   cursor: pointer;
@@ -54,11 +67,12 @@ export default {
   display: flex;
   align-items: center;
   &.active {
-    color: $blue;
+    color: $green;
     font-weight: bold;
   }
   &.disabled {
     color: $disabled-text-color;
+    cursor: not-allowed;
   }
 }
 </style>

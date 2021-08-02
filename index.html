@@ -22,30 +22,26 @@
         --border-radius: 4px;
         --color: #333;
         --border-color: #999;
-        --border-color-hover: #666;
+        --border-color-hover: #555;
       }
     </style>
   </head>
   <body>
     <div id="app">
-      <j-tabs :selected.sync="selectedName">
-        <j-tabs-head>
-          <template slot="action">
-            <button>选项</button>
+      <div style="overflow: hidden;border: 1px solid green; padding: 20px;margin-top:100px;">
+        <j-popover>
+          <template slot="content">
+            <div>popover内容</div>
           </template>
-          <j-tabs-item name="tabs1" disabled>
-            <j-icon name="setting"></j-icon>
-            tabs1
-          </j-tabs-item>
-          <j-tabs-item name="tabs2">tabs2</j-tabs-item>
-          <j-tabs-item name="tabs3">tabs3</j-tabs-item>
-        </j-tabs-head>
-        <j-tabs-body>
-          <j-tabs-pane name="tabs1">tabs1内容</j-tabs-pane>
-          <j-tabs-pane name="tabs2">tabs2内容</j-tabs-pane>
-          <j-tabs-pane name="tabs3">tabs3内容</j-tabs-pane>
-        </j-tabs-body>
-      </j-tabs>
+          <button>点我</button>
+        </j-popover>
+        <j-popover>
+          <template slot="content">
+            <div>popover内容</div>
+          </template>
+          <button>点我</button>
+        </j-popover>
+      </div>
     </div>
     <script src="/src/app.js"></script>
   </body>
