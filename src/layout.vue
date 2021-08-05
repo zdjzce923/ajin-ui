@@ -28,6 +28,7 @@ export default {
 .layout {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
   &.hasSider {
     flex-direction: row;
   }

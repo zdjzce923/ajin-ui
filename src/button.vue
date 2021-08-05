@@ -36,21 +36,29 @@ export default {
 
 <style lang='scss'>
 .j-button {
+  $border-radius: 4px;
+  $button-height: 32px;
+  $fontsize: 14px;
+  $button-bg: white;
+  $button-active-bg: #eee;
+  $color: #333;
+  $border-color: #999;
+  $border-color-hover: #555;
   vertical-align: middle;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  font-size: var(--font-size);
-  height: var(--button-height);
+  font-size: $fontsize;
+  height: $button-height;
   padding: 0 1em;
-  border-radius: var(--border-radius);
-  border: 1px solid var(--border-color);
-  background: var(--button-bg);
+  border-radius: $border-radius;
+  border: 1px solid $border-color;
+  background: $button-bg;
   &:hover {
-    border-color: var(--border-color-hover);
+    border-color: $border-color-hover;
   }
   &:active {
-    background-color: var(--button-active-bg);
+    background-color: $button-active-bg;
   }
   &:focus {
     outline: none;

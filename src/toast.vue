@@ -19,7 +19,7 @@ export default {
   props: {
     autoClose: {
       type: [Boolean, Number],
-      default: 5,
+      default: false,
       validator(value) {
         return value === false || typeof value === "number";
       },
@@ -89,7 +89,7 @@ export default {
 <style lang="scss" scoped>
 $font-size: 14px;
 $toast-min-height: 40px;
-$toast-bg: rgba(0, 0, 0, 0.75);
+$toast-bg: rgba(0, 0, 0, 0.85);
 @keyframes slide-up {
   0% {
     opacity: 0;
@@ -119,6 +119,7 @@ $toast-bg: rgba(0, 0, 0, 0.75);
   }
 }
 .wrapper {
+  z-index: 50;
   position: fixed;
   left: 50%;
   transform: translateX(-50%);

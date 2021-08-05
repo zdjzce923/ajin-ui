@@ -38,7 +38,7 @@ export default {
       default: false,
     },
     name: {
-      type: String || Number,
+      type: [String, Number],
       required: true,
     },
   },
@@ -50,7 +50,6 @@ export default {
       }
       this.eventBus && this.eventBus.$emit("update:selected", this.name, this);
       this.$emit("click", this);
-      this.active = true;
     },
   },
 };

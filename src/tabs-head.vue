@@ -1,5 +1,5 @@
 <template>
-  <div class="tabs-head">
+  <div class="tabs-head" ref="head">
     <slot></slot>
     <div class="line" ref="line"></div>
     <div class="actions-wrapper">
@@ -19,9 +19,11 @@ export default {
         console.warn("tabs的子组件应该是tabs-head和tabs-nav，但你没有写子组件");
     }
     this.eventBus.$on("update:selected", (item, vm) => {
-      let { width, height, top, left } = vm.$el.getBoundingClientRect();
+      let { width, left } = vm.$el.getBoundingClientRect();
+      let { left: left2 } = this.$refs.head.getBoundingClientRect();
       this.$refs.line.style.width = `${width}px`;
-      this.$refs.line.style.left = `${left}px`;
+      console.log(left);
+      this.$refs.line.style.left = `${left - left2}px`;
     });
   },
 };
@@ -34,8 +36,9 @@ $border-color: #ddd;
 .tabs-head {
   display: flex;
   height: $tab-height;
-  justify-content: flex-start;
   position: relative;
+  left: 0;
+  justify-content: flex-start;
   border-bottom: 1px solid $border-color;
   > .line {
     position: absolute;
