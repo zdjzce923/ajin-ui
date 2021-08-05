@@ -17,6 +17,8 @@ import TabsBody from './tabs-body'
 import TabsItem from './tabs-item'
 import TabsPane from './tabs-pane'
 import Popover from './popover.vue'
+import Collapse from './collapse.vue'
+import CollapseItem from './collapse-item.vue'
 
 Vue.component('j-button', Button)
 Vue.component('j-button-group', ButtonGroup)
@@ -31,6 +33,8 @@ Vue.component('j-tabs-body', TabsBody)
 Vue.component('j-tabs-item', TabsItem)
 Vue.component('j-tabs-pane', TabsPane)
 Vue.component('j-popover', Popover)
+Vue.component('j-collapse', Collapse)
+Vue.component('j-collapse-item', CollapseItem)
 
 Vue.component('j-layout', LayOut)
 Vue.component('j-content', Content)
@@ -44,6 +48,7 @@ new Vue({
   data() {
     return {
       selectedName: 'tabs2',
+      selectedTab: ['1'],
     }
   },
   methods: {},
