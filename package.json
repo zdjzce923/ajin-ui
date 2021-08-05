@@ -1,6 +1,6 @@
 {
   "name": "ajin-ui-demo",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "这是一个UI组件",
   "main": "dist/index.js",
   "scripts": {

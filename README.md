@@ -61,3 +61,5 @@ export default {
 ```
 
 ## 文档
+
+[文档链接](https://zdjzce923.github.io/ajin-ui/)
