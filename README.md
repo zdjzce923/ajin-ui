@@ -27,8 +27,8 @@ npm i --save ajin-ui-demo
 ```
 import {Button, ButtonGroup, Icon,Col, Collapse, CollapseItem, Content, Footer, Header, Input, Layout, Popover
          , Row, Sider, Tabs, TabsHead, TabsBody, TabsItem, TabsPane, Toast,plugin
-       } from 'ajin-ui'
-import 'ajin-ui/dist/index.css'
+       } from 'ajin-ui-demo'
+import 'ajin-ui-demo/dist/index.css'
 import Vue from 'vue'
 Vue.use(plugin)
 
@@ -55,7 +55,7 @@ export default {
         'j-tabs-item': TabsItem,
         'j-tabs-pane': TabsPane,
         'j-toast': Toast,
- j
+ }
 }
 
 ```
