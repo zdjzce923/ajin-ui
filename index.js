@@ -4,7 +4,7 @@ import ButtonGroup from './src/button-group.vue'
 import Input from './src/input.vue'
 import Row from './src/row.vue'
 import Col from './src/col.vue'
-import LayOut from './src/layout.vue'
+import Layout from './src/layout.vue'
 import Content from './src/content.vue'
 import Header from './src/header.vue'
 import Footer from './src/footer.vue'
@@ -25,7 +25,7 @@ export {
   Input,
   Row,
   Col,
-  LayOut,
+  Layout,
   Content,
   Header,
   Footer,

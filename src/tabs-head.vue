@@ -22,7 +22,6 @@ export default {
       let { width, left } = vm.$el.getBoundingClientRect();
       let { left: left2 } = this.$refs.head.getBoundingClientRect();
       this.$refs.line.style.width = `${width}px`;
-      console.log(left);
       this.$refs.line.style.left = `${left - left2}px`;
     });
   },
